@@ -1,0 +1,14 @@
+version: '2.0'
+services:
+  webserver:
+    image: nginx:latest
+    container_name: webserver
+    ports:
+     - 8080:80
+    networks:
+     - jbalboa-network
+
+#Docker Networks
+networks:
+  jbalboa-network:
+    driver: bridge
